@@ -1,6 +1,5 @@
 import streamlit as st
 import requests, json
-import api_key
 
 st.markdown(
     """
@@ -17,7 +16,7 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-API_KEY = api_key.API_KEY
+API_KEY = st.secrets["API_KEY"]
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
 icon_url = "http://openweathermap.org/img/wn/{}@2x.png"
 
